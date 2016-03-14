@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD245FBF1C96E287000FCE16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FBE1C96E287000FCE16 /* main.m */; };
+		DD245FC21C96E287000FCE16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FC11C96E287000FCE16 /* AppDelegate.m */; };
+		DD245FC51C96E287000FCE16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FC41C96E287000FCE16 /* ViewController.m */; };
+		DD245FC81C96E287000FCE16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD245FC61C96E287000FCE16 /* Main.storyboard */; };
+		DD245FCA1C96E287000FCE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD245FC91C96E287000FCE16 /* Assets.xcassets */; };
+		DD245FCD1C96E287000FCE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD245FCB1C96E287000FCE16 /* LaunchScreen.storyboard */; };
+		DD245FD81C96E287000FCE16 /* MXDownloadManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FD71C96E287000FCE16 /* MXDownloadManagerTests.m */; };
+		DD245FE31C96E287000FCE16 /* MXDownloadManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FE21C96E287000FCE16 /* MXDownloadManagerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD245FD41C96E287000FCE16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD245FB21C96E287000FCE16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD245FB91C96E287000FCE16;
+			remoteInfo = MXDownloadManager;
+		};
+		DD245FDF1C96E287000FCE16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD245FB21C96E287000FCE16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD245FB91C96E287000FCE16;
+			remoteInfo = MXDownloadManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD245FBA1C96E287000FCE16 /* MXDownloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXDownloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD245FBE1C96E287000FCE16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD245FC01C96E287000FCE16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DD245FC11C96E287000FCE16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD245FC31C96E287000FCE16 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DD245FC41C96E287000FCE16 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DD245FC71C96E287000FCE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD245FC91C96E287000FCE16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD245FCC1C96E287000FCE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD245FCE1C96E287000FCE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD245FD31C96E287000FCE16 /* MXDownloadManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MXDownloadManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD245FD71C96E287000FCE16 /* MXDownloadManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXDownloadManagerTests.m; sourceTree = "<group>"; };
+		DD245FD91C96E287000FCE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD245FDE1C96E287000FCE16 /* MXDownloadManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MXDownloadManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD245FE21C96E287000FCE16 /* MXDownloadManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXDownloadManagerUITests.m; sourceTree = "<group>"; };
+		DD245FE41C96E287000FCE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD245FB71C96E287000FCE16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD245FD01C96E287000FCE16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD245FDB1C96E287000FCE16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD245FB11C96E287000FCE16 = {
+			isa = PBXGroup;
+			children = (
+				DD245FBC1C96E287000FCE16 /* MXDownloadManager */,
+				DD245FD61C96E287000FCE16 /* MXDownloadManagerTests */,
+				DD245FE11C96E287000FCE16 /* MXDownloadManagerUITests */,
+				DD245FBB1C96E287000FCE16 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD245FBB1C96E287000FCE16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD245FBA1C96E287000FCE16 /* MXDownloadManager.app */,
+				DD245FD31C96E287000FCE16 /* MXDownloadManagerTests.xctest */,
+				DD245FDE1C96E287000FCE16 /* MXDownloadManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD245FBC1C96E287000FCE16 /* MXDownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				DD245FC01C96E287000FCE16 /* AppDelegate.h */,
+				DD245FC11C96E287000FCE16 /* AppDelegate.m */,
+				DD245FC31C96E287000FCE16 /* ViewController.h */,
+				DD245FC41C96E287000FCE16 /* ViewController.m */,
+				DD245FC61C96E287000FCE16 /* Main.storyboard */,
+				DD245FC91C96E287000FCE16 /* Assets.xcassets */,
+				DD245FCB1C96E287000FCE16 /* LaunchScreen.storyboard */,
+				DD245FCE1C96E287000FCE16 /* Info.plist */,
+				DD245FBD1C96E287000FCE16 /* Supporting Files */,
+			);
+			path = MXDownloadManager;
+			sourceTree = "<group>";
+		};
+		DD245FBD1C96E287000FCE16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD245FBE1C96E287000FCE16 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD245FD61C96E287000FCE16 /* MXDownloadManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD245FD71C96E287000FCE16 /* MXDownloadManagerTests.m */,
+				DD245FD91C96E287000FCE16 /* Info.plist */,
+			);
+			path = MXDownloadManagerTests;
+			sourceTree = "<group>";
+		};
+		DD245FE11C96E287000FCE16 /* MXDownloadManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD245FE21C96E287000FCE16 /* MXDownloadManagerUITests.m */,
+				DD245FE41C96E287000FCE16 /* Info.plist */,
+			);
+			path = MXDownloadManagerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD245FB91C96E287000FCE16 /* MXDownloadManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD245FE71C96E287000FCE16 /* Build configuration list for PBXNativeTarget "MXDownloadManager" */;
+			buildPhases = (
+				DD245FB61C96E287000FCE16 /* Sources */,
+				DD245FB71C96E287000FCE16 /* Frameworks */,
+				DD245FB81C96E287000FCE16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MXDownloadManager;
+			productName = MXDownloadManager;
+			productReference = DD245FBA1C96E287000FCE16 /* MXDownloadManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD245FD21C96E287000FCE16 /* MXDownloadManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD245FEA1C96E287000FCE16 /* Build configuration list for PBXNativeTarget "MXDownloadManagerTests" */;
+			buildPhases = (
+				DD245FCF1C96E287000FCE16 /* Sources */,
+				DD245FD01C96E287000FCE16 /* Frameworks */,
+				DD245FD11C96E287000FCE16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD245FD51C96E287000FCE16 /* PBXTargetDependency */,
+			);
+			name = MXDownloadManagerTests;
+			productName = MXDownloadManagerTests;
+			productReference = DD245FD31C96E287000FCE16 /* MXDownloadManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD245FDD1C96E287000FCE16 /* MXDownloadManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD245FED1C96E287000FCE16 /* Build configuration list for PBXNativeTarget "MXDownloadManagerUITests" */;
+			buildPhases = (
+				DD245FDA1C96E287000FCE16 /* Sources */,
+				DD245FDB1C96E287000FCE16 /* Frameworks */,
+				DD245FDC1C96E287000FCE16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD245FE01C96E287000FCE16 /* PBXTargetDependency */,
+			);
+			name = MXDownloadManagerUITests;
+			productName = MXDownloadManagerUITests;
+			productReference = DD245FDE1C96E287000FCE16 /* MXDownloadManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD245FB21C96E287000FCE16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "谢鹏翔";
+				TargetAttributes = {
+					DD245FB91C96E287000FCE16 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					DD245FD21C96E287000FCE16 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = DD245FB91C96E287000FCE16;
+					};
+					DD245FDD1C96E287000FCE16 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = DD245FB91C96E287000FCE16;
+					};
+				};
+			};
+			buildConfigurationList = DD245FB51C96E287000FCE16 /* Build configuration list for PBXProject "MXDownloadManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD245FB11C96E287000FCE16;
+			productRefGroup = DD245FBB1C96E287000FCE16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD245FB91C96E287000FCE16 /* MXDownloadManager */,
+				DD245FD21C96E287000FCE16 /* MXDownloadManagerTests */,
+				DD245FDD1C96E287000FCE16 /* MXDownloadManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD245FB81C96E287000FCE16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD245FCD1C96E287000FCE16 /* LaunchScreen.storyboard in Resources */,
+				DD245FCA1C96E287000FCE16 /* Assets.xcassets in Resources */,
+				DD245FC81C96E287000FCE16 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD245FD11C96E287000FCE16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD245FDC1C96E287000FCE16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD245FB61C96E287000FCE16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD245FC51C96E287000FCE16 /* ViewController.m in Sources */,
+				DD245FC21C96E287000FCE16 /* AppDelegate.m in Sources */,
+				DD245FBF1C96E287000FCE16 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD245FCF1C96E287000FCE16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD245FD81C96E287000FCE16 /* MXDownloadManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD245FDA1C96E287000FCE16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD245FE31C96E287000FCE16 /* MXDownloadManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD245FD51C96E287000FCE16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD245FB91C96E287000FCE16 /* MXDownloadManager */;
+			targetProxy = DD245FD41C96E287000FCE16 /* PBXContainerItemProxy */;
+		};
+		DD245FE01C96E287000FCE16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD245FB91C96E287000FCE16 /* MXDownloadManager */;
+			targetProxy = DD245FDF1C96E287000FCE16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD245FC61C96E287000FCE16 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD245FC71C96E287000FCE16 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD245FCB1C96E287000FCE16 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD245FCC1C96E287000FCE16 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD245FE51C96E287000FCE16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD245FE61C96E287000FCE16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD245FE81C96E287000FCE16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MXDownloadManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyoung.jyond.MXDownloadManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DD245FE91C96E287000FCE16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MXDownloadManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyoung.jyond.MXDownloadManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DD245FEB1C96E287000FCE16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MXDownloadManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyoung.jyond.MXDownloadManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MXDownloadManager.app/MXDownloadManager";
+			};
+			name = Debug;
+		};
+		DD245FEC1C96E287000FCE16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MXDownloadManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyoung.jyond.MXDownloadManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MXDownloadManager.app/MXDownloadManager";
+			};
+			name = Release;
+		};
+		DD245FEE1C96E287000FCE16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MXDownloadManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyoung.jyond.MXDownloadManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MXDownloadManager;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DD245FEF1C96E287000FCE16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MXDownloadManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyoung.jyond.MXDownloadManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MXDownloadManager;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD245FB51C96E287000FCE16 /* Build configuration list for PBXProject "MXDownloadManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD245FE51C96E287000FCE16 /* Debug */,
+				DD245FE61C96E287000FCE16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD245FE71C96E287000FCE16 /* Build configuration list for PBXNativeTarget "MXDownloadManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD245FE81C96E287000FCE16 /* Debug */,
+				DD245FE91C96E287000FCE16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD245FEA1C96E287000FCE16 /* Build configuration list for PBXNativeTarget "MXDownloadManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD245FEB1C96E287000FCE16 /* Debug */,
+				DD245FEC1C96E287000FCE16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD245FED1C96E287000FCE16 /* Build configuration list for PBXNativeTarget "MXDownloadManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD245FEE1C96E287000FCE16 /* Debug */,
+				DD245FEF1C96E287000FCE16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD245FB21C96E287000FCE16 /* Project object */;
+}
