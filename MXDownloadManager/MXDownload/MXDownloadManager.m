@@ -46,7 +46,7 @@ static MXDownloadManager *_dataCenter = nil;
 
 #pragma mark - 添加 查询任务
 // 添加任务到任务列表中
-- (void)addDownloadTaskToList:(NSString *)urlString taskName:(NSString *)taskName taskProductType:(NSNumber *)productType resourceModel:(ResourceModel *)resourceModel
+- (void)addDownloadTaskToList:(NSString *)urlString taskName:(NSString *)taskName taskIdentifier:(NSString *)taskIdentifier
 {
     if (!taskName) {
         return;
@@ -70,7 +70,6 @@ static MXDownloadManager *_dataCenter = nil;
         }
     }
     
-    
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
@@ -78,11 +77,10 @@ static MXDownloadManager *_dataCenter = nil;
     NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request];
     
     NSDictionary *dic = @{@"taskName":taskName,
-                          @"productType":productType,
+                          @"taskIdentifier":taskIdentifier,
                           @"url":urlString,
                           @"taskProgress":@"0%%",
                           @"session":session,
-                          @"resourceModel":resourceModel,
                           @"isFinish":@0};
     
     NSMutableDictionary *mutableDic = [NSMutableDictionary dictionaryWithDictionary:dic];
@@ -104,10 +102,10 @@ static MXDownloadManager *_dataCenter = nil;
 
 
 // 查询任务的工作状态
-- (NSDictionary *)askForTaskStatusWithProductType:(NSNumber *)productType
+- (NSDictionary *)askForTaskStatusWithTaskIdentifier:(NSString *)taskIdentifier
 {
     for (NSMutableDictionary *dict in self.taskList) {
-        if ([dict[@"productType"] intValue] == [productType intValue]) {
+        if ([dict[@"taskIdentifier"] isEqualToString:taskIdentifier]  ) {
             
             return [dict copy];
         }
@@ -146,13 +144,6 @@ static MXDownloadManager *_dataCenter = nil;
     if (moveError) {
         NSLog(@"移动文件失败:%@", moveError.userInfo);
     }
-
-    
-    NSData *fileProData = [NSKeyedArchiver archivedDataWithRootObject:currentTask[@"resourceModel"]];
-    
-    NSString *keyOfResource = [NSString stringWithFormat:@"downloadResource_%@",currentTask[@"productType"]];
-    
-    [[NSUserDefaults standardUserDefaults] setObject:fileProData forKey:keyOfResource];
     
     [currentTask setObject:@1 forKey:@"isFinish"];
 }

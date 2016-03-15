@@ -16,7 +16,6 @@
 		DD245FD81C96E287000FCE16 /* MXDownloadManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FD71C96E287000FCE16 /* MXDownloadManagerTests.m */; };
 		DD245FE31C96E287000FCE16 /* MXDownloadManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FE21C96E287000FCE16 /* MXDownloadManagerUITests.m */; };
 		DD245FF31C96ECB5000FCE16 /* MXDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FF21C96ECB5000FCE16 /* MXDownloadManager.m */; };
-		DD245FF61C96ED1D000FCE16 /* ResourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FF51C96ED1D000FCE16 /* ResourceModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +54,7 @@
 		DD245FE41C96E287000FCE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD245FF11C96ECB5000FCE16 /* MXDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXDownloadManager.h; sourceTree = "<group>"; };
 		DD245FF21C96ECB5000FCE16 /* MXDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXDownloadManager.m; sourceTree = "<group>"; };
-		DD245FF41C96ED1D000FCE16 /* ResourceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceModel.h; sourceTree = "<group>"; };
-		DD245FF51C96ED1D000FCE16 /* ResourceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceModel.m; sourceTree = "<group>"; };
+		DD245FF91C97C603000FCE16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +85,7 @@
 		DD245FB11C96E287000FCE16 = {
 			isa = PBXGroup;
 			children = (
+				DD245FF91C97C603000FCE16 /* Foundation.framework */,
 				DD245FBC1C96E287000FCE16 /* MXDownloadManager */,
 				DD245FD61C96E287000FCE16 /* MXDownloadManagerTests */,
 				DD245FE11C96E287000FCE16 /* MXDownloadManagerUITests */,
@@ -152,8 +151,6 @@
 			children = (
 				DD245FF11C96ECB5000FCE16 /* MXDownloadManager.h */,
 				DD245FF21C96ECB5000FCE16 /* MXDownloadManager.m */,
-				DD245FF41C96ED1D000FCE16 /* ResourceModel.h */,
-				DD245FF51C96ED1D000FCE16 /* ResourceModel.m */,
 			);
 			path = MXDownload;
 			sourceTree = "<group>";
@@ -289,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD245FC51C96E287000FCE16 /* ViewController.m in Sources */,
-				DD245FF61C96ED1D000FCE16 /* ResourceModel.m in Sources */,
 				DD245FC21C96E287000FCE16 /* AppDelegate.m in Sources */,
 				DD245FF31C96ECB5000FCE16 /* MXDownloadManager.m in Sources */,
 				DD245FBF1C96E287000FCE16 /* main.m in Sources */,
