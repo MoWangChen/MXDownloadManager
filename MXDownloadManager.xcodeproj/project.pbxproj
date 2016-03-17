@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD088FAC1C9A4D3C007F3C3C /* MXDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD088FAB1C9A4D3C007F3C3C /* MXDownloadModel.m */; };
 		DD245FBF1C96E287000FCE16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FBE1C96E287000FCE16 /* main.m */; };
 		DD245FC21C96E287000FCE16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FC11C96E287000FCE16 /* AppDelegate.m */; };
 		DD245FC51C96E287000FCE16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD245FC41C96E287000FCE16 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD088FAA1C9A4D3C007F3C3C /* MXDownloadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXDownloadModel.h; sourceTree = "<group>"; };
+		DD088FAB1C9A4D3C007F3C3C /* MXDownloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXDownloadModel.m; sourceTree = "<group>"; };
 		DD245FBA1C96E287000FCE16 /* MXDownloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXDownloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD245FBE1C96E287000FCE16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD245FC01C96E287000FCE16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		DD245FE41C96E287000FCE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD245FF11C96ECB5000FCE16 /* MXDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXDownloadManager.h; sourceTree = "<group>"; };
 		DD245FF21C96ECB5000FCE16 /* MXDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXDownloadManager.m; sourceTree = "<group>"; };
-		DD245FF91C97C603000FCE16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,6 @@
 		DD245FB11C96E287000FCE16 = {
 			isa = PBXGroup;
 			children = (
-				DD245FF91C97C603000FCE16 /* Foundation.framework */,
 				DD245FBC1C96E287000FCE16 /* MXDownloadManager */,
 				DD245FD61C96E287000FCE16 /* MXDownloadManagerTests */,
 				DD245FE11C96E287000FCE16 /* MXDownloadManagerUITests */,
@@ -151,6 +152,8 @@
 			children = (
 				DD245FF11C96ECB5000FCE16 /* MXDownloadManager.h */,
 				DD245FF21C96ECB5000FCE16 /* MXDownloadManager.m */,
+				DD088FAA1C9A4D3C007F3C3C /* MXDownloadModel.h */,
+				DD088FAB1C9A4D3C007F3C3C /* MXDownloadModel.m */,
 			);
 			path = MXDownload;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD245FC51C96E287000FCE16 /* ViewController.m in Sources */,
+				DD088FAC1C9A4D3C007F3C3C /* MXDownloadModel.m in Sources */,
 				DD245FC21C96E287000FCE16 /* AppDelegate.m in Sources */,
 				DD245FF31C96ECB5000FCE16 /* MXDownloadManager.m in Sources */,
 				DD245FBF1C96E287000FCE16 /* main.m in Sources */,
