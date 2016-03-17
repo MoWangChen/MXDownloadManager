@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "MXDownloadModel.h"
 
 @interface MXDownloadManager : NSObject
 

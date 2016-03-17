@@ -76,16 +76,15 @@ static MXDownloadManager *_dataCenter = nil;
     
     NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request];
     
-    NSDictionary *dic = @{@"taskName":taskName,
-                          @"taskIdentifier":taskIdentifier,
-                          @"url":urlString,
-                          @"taskProgress":@"0%%",
-                          @"session":session,
-                          @"isFinish":@0};
+    MXDownloadModel *model = [[MXDownloadModel alloc] init];
+    model.taskName = taskName;
+    model.taskIdentifier = taskIdentifier;
+    model.urlString = urlString;
+    model.taskProgress = 0.0f;
+    model.session = session;
+    model.isFinish = NO;
     
-    NSMutableDictionary *mutableDic = [NSMutableDictionary dictionaryWithDictionary:dic];
-    
-    [self.taskList addObject:mutableDic];
+    [self.taskList addObject:model];
     
     [task resume];
     
@@ -120,22 +119,22 @@ static MXDownloadManager *_dataCenter = nil;
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location {
     NSLog(@"线程:%@; 位置:%@", [NSThread currentThread], location);
     
-    NSMutableDictionary *currentTask = nil;
+    MXDownloadModel *currentTask = nil;
     
-    for (NSMutableDictionary *dict in self.taskList) {
+    for (MXDownloadModel *model in self.taskList) {
         
-        if (dict[@"session"] == session) {
+        if (model.session == session) {
             
-            currentTask = dict;
+            currentTask = model;
         }
         
-        NSLog(@"task:%@  -- %@",dict[@"taskName"],dict[@"taskProgress"]);
+        NSLog(@"task:%@  -- %f",model.taskName,model.taskProgress);
     }
     
     //将默认tmp目录下的文件移动到/Libary/Caches/
     NSString *cachesStr = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
     
-    NSString *filePath = [cachesStr stringByAppendingPathComponent:currentTask[@"taskName"]];
+    NSString *filePath = [cachesStr stringByAppendingPathComponent:currentTask.taskName];
     
     NSError *moveError = nil;
     
@@ -145,7 +144,7 @@ static MXDownloadManager *_dataCenter = nil;
         NSLog(@"移动文件失败:%@", moveError.userInfo);
     }
     
-    [currentTask setObject:@1 forKey:@"isFinish"];
+    currentTask.isFinish = YES;
 }
 
 
@@ -154,17 +153,17 @@ static MXDownloadManager *_dataCenter = nil;
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
     
     //计算进度
-    double progressNum = (double)totalBytesWritten / totalBytesExpectedToWrite;
+    float progressNum = (double)totalBytesWritten / totalBytesExpectedToWrite;
     
     NSString *progress = [NSString stringWithFormat:@"%.1f%%", progressNum*100];
     
     
-    for (NSMutableDictionary *dict in self.taskList) {
-        if (dict[@"session"] == session) {
-            [dict setObject:progress forKey:@"taskProgress"];
+    for (MXDownloadModel *model in self.taskList) {
+        if (model.session == session) {
+            model.taskProgress = progressNum;
         }
         
-        NSLog(@"task:%@  -- %@",dict[@"taskName"],dict[@"taskProgress"]);
+        NSLog(@"task:%@  -- %@",model.taskName,progress);
     }
     
     
