@@ -63,8 +63,8 @@ static MXDownloadManager *_dataCenter = nil;
     }
     
     // 防止任务重复添加
-    for (NSDictionary *dict in self.taskList) {
-        if ([urlString isEqualToString:dict[@"url"]]) {
+    for (MXDownloadModel *model in self.taskList) {
+        if ([urlString isEqualToString:model.urlString]) {
             
             return;
         }
@@ -83,6 +83,11 @@ static MXDownloadManager *_dataCenter = nil;
     model.taskProgress = 0.0f;
     model.session = session;
     model.isFinish = NO;
+    model.bytesWritten = 0;
+    model.totalBytesWritten = 0;
+    model.taskDate = [NSDate date];
+    model.taskSpeed = @"0kb/s";
+    model.taskSize = @"0M";
     
     [self.taskList addObject:model];
     
@@ -101,12 +106,12 @@ static MXDownloadManager *_dataCenter = nil;
 
 
 // 查询任务的工作状态
-- (NSDictionary *)askForTaskStatusWithTaskIdentifier:(NSString *)taskIdentifier
+- (MXDownloadModel *)askForTaskStatusWithTaskIdentifier:(NSString *)taskIdentifier
 {
-    for (NSMutableDictionary *dict in self.taskList) {
-        if ([dict[@"taskIdentifier"] isEqualToString:taskIdentifier]  ) {
+    for (MXDownloadModel *model in self.taskList) {
+        if ([model.taskIdentifier isEqualToString:taskIdentifier]  ) {
             
-            return [dict copy];
+            return model;
         }
     }
     return nil;
@@ -144,6 +149,7 @@ static MXDownloadManager *_dataCenter = nil;
         NSLog(@"移动文件失败:%@", moveError.userInfo);
     }
     
+    currentTask.taskSpeed = @"0kb/s";
     currentTask.isFinish = YES;
 }
 
@@ -157,15 +163,25 @@ static MXDownloadManager *_dataCenter = nil;
     
     NSString *progress = [NSString stringWithFormat:@"%.1f%%", progressNum*100];
     
-    
     for (MXDownloadModel *model in self.taskList) {
         if (model.session == session) {
             model.taskProgress = progressNum;
+            model.totalBytesWritten = totalBytesExpectedToWrite;
+            model.taskSize = [self formatByteCount:totalBytesExpectedToWrite];
+            NSDate *currentDate = [NSDate date];
+            if ([currentDate timeIntervalSinceDate:model.taskDate] > 0.5) {
+                NSTimeInterval time = [currentDate timeIntervalSinceDate:model.taskDate];
+                int64_t speed = (totalBytesWritten - model.bytesWritten) / time*1000;
+                model.taskSpeed = [NSString stringWithFormat:@"%@/s",[self formatByteCount:speed]];
+                
+                
+                model.bytesWritten = totalBytesWritten;
+            }
+            
+            
+            NSLog(@"task:%@  -- %@ , %@",model.taskName,progress,model.taskSpeed);
         }
-        
-        NSLog(@"task:%@  -- %@",model.taskName,progress);
     }
-    
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
@@ -181,5 +197,9 @@ static MXDownloadManager *_dataCenter = nil;
     });
 }
 
+- (NSString*)formatByteCount:(long long)size
+{
+    return [NSByteCountFormatter stringFromByteCount:size countStyle:NSByteCountFormatterCountStyleFile];
+}
 
 @end

@@ -28,7 +28,6 @@
  *  @param urlString        下载地址url
  *  @param taskName         任务名称
  *  @param taskIdentifier   任务唯一标识
- *  @param resourceModel    资源属性
  */
 - (void)addDownloadTaskToList:(NSString *)urlString taskName:(NSString *)taskName taskIdentifier:(NSString *)taskIdentifier;
 
@@ -40,6 +39,6 @@
  *
  *  @return 状态字典信息
  */
-- (NSDictionary *)askForTaskStatusWithTaskIdentifier:(NSString *)taskIdentifier;
+- (MXDownloadModel *)askForTaskStatusWithTaskIdentifier:(NSString *)taskIdentifier;
 
 @end

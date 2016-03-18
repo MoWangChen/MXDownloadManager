@@ -36,6 +36,11 @@
 @property (nonatomic, strong) NSString *taskSpeed;
 
 /**
+ *  任务大小
+ */
+@property (nonatomic, strong) NSString *taskSize;
+
+/**
  *  任务会话属性
  */
 @property (nonatomic, strong) NSURLSession *session;
@@ -44,5 +49,20 @@
  *  任务是否已完成
  */
 @property (nonatomic, assign) BOOL isFinish;
+
+/**
+ *  任务已下载长度
+ */
+@property (nonatomic, assign) int64_t bytesWritten;
+
+/**
+ *  任务总长度
+ */
+@property (nonatomic, assign) int64_t totalBytesWritten;
+
+/**
+ *  任务时间
+ */
+@property (nonatomic, strong) NSDate *taskDate;
 
 @end
