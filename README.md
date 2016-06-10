@@ -19,11 +19,11 @@
 
 3.使用单例工具（可使用此方法，同时添加多个任务）
     
-     NSString *urlStr1 = @"http://api.joyoung.com:8089/ia/upload1/2016/03/12/ca27d18ee8ba11e5809d005056897df9.zip";
+     NSString *urlStr1 = @"http://www.download.com/ia/upload1/2016/03/12/ca27d18ee8ba11e5809d005056897df9.zip";
      
     [[MXDownloadManager sharedDataCenter] addDownloadTaskToList:urlStr1 taskName:@"task_one" taskIdentifier:@"task_first"];
     
-    NSString *urlStr2 = @"http://apitest.joyoung.com:8089/ia/upload1/2015/12/24/ios.zip";
+    NSString *urlStr2 = @"http://www.download.com/ia/upload1/2015/12/24/ios.zip";
     
     [[MXDownloadManager sharedDataCenter] addDownloadTaskToList:urlStr2 taskName:@"task_two" taskIdentifier:@"task_second"];
     
